@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    background-color: #ddd;
+    margin: 0;
+}
+
+.encabezado {
+    text-align: center;
+    background-color: #05c;
+    height: 150px;
+    padding: 5px;
+    color: #ddd;
+}
+
+.tarjeta {
+    border: #000 solid 2px;
+    border-radius: 6px;
+    margin-top: 100px;
+    margin-left: 430px;
+    padding: 25px;
+    width: 550px;
+}
+
+button{
+    background-color: #dc730a;
+    color: #ddd;
+    border-radius: 8px;
+    margin: 0;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #ddd;
+    color: #000;
+}
+
+#InformacionExtra {
+    display: block;
+}

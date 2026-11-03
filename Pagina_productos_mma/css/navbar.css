@@ -1,0 +1,126 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-gris);
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar_principal{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar_principal:hover{
+    border: 1px solid var(--color-negro);
+    border-radius: 8px;
+}
+
+.navbar_titulo{
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+.navbar_categorias{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 6px 0 6px;
+}
+
+.navbar_categoria{
+    background: none;
+    border: 1px solid var(--color-negro);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.navbar_categoria:hover{
+    transform: scale(1.15);
+    color: var(--color-blanco);
+    border: 1.5px solid var(--color-negro);
+}
+
+.navbar_derecha{
+    display: flex;
+    margin-right: 25px;
+}
+
+.navbar_button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar_button:hover{
+    border: 1px solid var(--color-negro);
+    border-radius: 8px;
+}
+
+.header {
+    box-sizing: border-box;
+}
+
+.navbar {
+    box-sizing: border-box;
+    gap: 16px;
+}
+
+.navbar_principal {
+    flex-shrink: 0;
+}
+
+.navbar_logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.navbar_categorias {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+}
+
+.navbar_categoria {
+    flex-shrink: 0;
+    padding: 8px 10px;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.navbar_derecha {
+    flex-shrink: 0;
+    align-items: center;
+    gap: 8px;
+    margin-right: 10px;
+}
+
+.navbar_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+
+.navbar_button img {
+    display: block;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}

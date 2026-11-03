@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANTHERS</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="icon" type="image/png" href="../assets/iconos/pantera.png">
+    <script src="../script/app.js" defer></script>
+    <script src="../script/productos.js" defer></script>
+</head>
+<body>
+    <!--==Header==-->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar_principal">
+                <img class="navbar_logo" src="../assets/iconos/icon-pantera.png" alt="Panteras" width="60px" height="60px">
+                <a href="index.html" class="navbar_titulo">
+                    PANTHERS
+                </a>
+            </div>
+            <div class="navbar_categorias">
+                <button class="navbar_categoria">
+                    Nuevo
+                </button>
+                <button class="navbar_categoria">
+                    Guantes
+                </button>
+                <button class="navbar_categoria">
+                    Hombre
+                </button>
+                <button class="navbar_categoria">
+                    Mujer
+                </button>
+                <button class="navbar_categoria">
+                    Niños
+                </button>
+                <button class="navbar_categoria">
+                    Costales
+                </button>
+                <button class="navbar_categoria">
+                    Deportes
+                </button>
+                <button class="navbar_categoria">
+                    Marcas
+                </button>
+            </div>
+            <div class="navbar_derecha">
+                <button class="navbar_button">
+                    <img src="../assets/iconos/avatar.png" alt="cuenta" width="30px" height="30px">
+                </button>
+                <button class="navbar_button">
+                    <img src="../assets/iconos/buscar.png" alt="buscar" width="30px" height="30px">
+                </button>
+                <button class="navbar_button">
+                    <img src="../assets/iconos/carrito-de-compras.png" alt="carrito" width="30px" height="30px">
+                </button>
+                <button class="navbar_button">
+                    <img src="../assets/iconos/favorito.png" alt="favorito" width="30px" height="30px">
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!--==Main==-->
+    <main>
+        <div class="hero">
+            <video autoplay loop muted playsinline width="100%" class="hero_video">
+            <source src="../assets/videos/inicio.mp4" type="video/mp4">
+            Tu navegador no soporta el video
+            </video>
+        </div>
+        <section class="barra_beneficios">
+            <ul class="lista_beneficios">
+                <li class="beneficio">
+                    <img class="beneficio_icono" src="../assets/iconos/enviado.png" alt="Envio gratis" width="40px" height="40px">
+                    <div>
+                        <h3>
+                            Envio Gratis
+                        </h3>
+                        <p>
+                            Envios gratis Guadalajara o dentro de Jalisco en pedidos de $2,000 en adelante
+                        </p>
+                    </div>
+                </li>
+                <li class="beneficio">
+                    <img class="beneficio_icono" src="../assets/iconos/caja.png" alt="Recoger" width="40px" height="40px">
+                    <div>
+                        <h3>
+                            Recoger Pedido en 48 Horas
+                        </h3>
+                        <p>
+                            En bodega Zapopan, Guadalajara
+                        </p>
+                    </div>
+                </li>
+                <li class="beneficio">
+                    <img class="beneficio_icono" src="../assets/iconos/tarjeta-de-credito.png" alt="Meses sin intereses" width="40px" height="40px">
+                    <div>
+                        <h3>
+                            12 Meses sin Intereses
+                        </h3>
+                        <p>
+                            En todas las compras
+                        </p>
+                    </div>
+                </li>
+                <li class="beneficio">
+                    <img class="beneficio_icono" src="../assets/iconos/devolver.png" alt="Devolver" width="40px" height="40px">
+                    <div>
+                        <h3>
+                            Devuelve con Facilidad
+                        </h3>
+                        <p>
+                            Compras con el respaldo PANTHERS
+                        </p>
+                    </div>
+                </li>
+                <li class="beneficio">
+                    <img class="beneficio_icono" src="../assets/iconos/ubicacion.png" alt="Entregas en mexico" width="40px" height="40px">
+                    <div>
+                        <h3>
+                            Entregas Rapidas Jalisco
+                        </h3>
+                        <p>
+                            Jalisco: 2 a 4 dias habiles
+                            <br>
+                            Otras ubicaciones: 3 a 7 dias habiles
+                        </p>
+                    </div>
+                </li>
+                <li class="beneficio">
+                    <img class="beneficio_icono" src="../assets/iconos/etiqueta.png" alt="Entregas en mexico" width="40px" height="40px">
+                    <div>
+                        <h3>
+                            Beneficios Nuevos Usuarios
+                        </h3>
+                        <p>
+                            Cupones de descuento para nuevos usuarios
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="seccion_categorias">
+            <div class="contenedor_categorias">
+                <button
+                class="flecha_carrusel flecha_izquierda"
+                id="flechaIzquierda"
+                aria-label="Ver categorías anteriores"
+                type="button">
+                &#10094;
+                </button>
+                <ul class="categorias" id="carruselCategorias">
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=careta" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/careta-box.jpeg" alt="Caretas">
+                            <div class="categoria_contenido">
+                                <h4>Caretas</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=costal" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/costal-presentacion.jpg" alt="Costal Pesado">
+                            <div class="categoria_contenido">
+                                <h4>Costal Muay thai</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=muay_thai" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/codera-thai.jpeg" alt="Codera">
+                            <div class="categoria_contenido">
+                                <h4>Codera Muay thai</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=bucal" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/bucal-perso.jpeg" alt="Bucales">
+                            <div class="categoria_contenido">
+                                <h4>Bucales Personalizados</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=costal" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/costal-gota.jpeg" alt="Costal Box">
+                            <div class="categoria_contenido">
+                                <h4>Costal Boxeo</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=espinilleras" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/espinillera-mma.jpeg" alt="Espinillera mma">
+                            <div class="categoria_contenido">
+                                <h4>Espinilleras MMA</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=guante_mma" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/guante-mma.jpeg" alt="Guante mma Sparring">
+                            <div class="categoria_contenido">
+                                <h4>Guantes MMA Sparring</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=wrestling" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/muñeco-lucha.jpeg" alt="Muñeco wrestling">
+                            <div class="categoria_contenido">
+                                <h4>Wrestling</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=guante_box" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/guante-box.jpeg" alt="Guante Kickboxing">
+                            <div class="categoria_contenido">
+                                <h4>Guante Boxeo</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                    <li class="categoria">
+                        <a href="../html/productos.html?categoria=espinilleras" class="tarjeta_categoria">
+                            <img src="../assets/imagenes/espinillera-thai.jpeg" alt="Espinillera Muay thai">
+                            <div class="categoria_contenido">
+                                <h4>Espinillera Muay thai</h4>
+                            </div>
+                            <span class="flecha_categoria">-></span>
+                        </a>
+                    </li>
+                </ul>
+                <button
+                class="flecha_carrusel flecha_derecha"
+                id="flechaDerecha"
+                aria-label="Ver siguientes categorías"
+                type="button">
+                &#10095;
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__columna">
+            <h4>Ayuda</h4>
+                <p>
+                    Un asesor estara disponible de lunes a viernes de 9 am-6 pm llamando al
+                    <a href="https://wa.me/+523324447372" target="_blank">+523324447372.</a> Tambien puede contactarse a travez de Whatsapp o mandando un correo a la dirección
+                    <a href="mailto:danmarluna65@gmail.com" target="_blank">danmarluna65@gmail.com</a>
+                </p>
+                <p>
+                    Preguntas Frecuentes
+                </p>
+                <p>
+                    Condiciones y privacidad
+                </p>
+            </div>
+            <div class="footer__columna">
+            <h4>Destacados</h4>
+                <p>
+                    <a href="productos.html">
+                    MMA
+                    </a>
+                </p>
+                <p>
+                    <a href="productos.html">
+                    Box
+                    </a>
+                </p>
+                <p>
+                    <a href="productos.html">
+                    Wrestling
+                    </a>
+                </p>
+            </div>
+            <div class="footer__columna">
+            <h4>Siguenos</h4>
+                <p>
+                    <a href="#">
+                    Instagram
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                    Facebook
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                    Tiktok
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

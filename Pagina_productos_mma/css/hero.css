@@ -1,0 +1,57 @@
+.hero{
+    position: relative;
+    width: 100%;
+    height: 99vh;
+    overflow: hidden;
+}
+
+.hero_video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.barra_beneficios{
+    width: 100%;
+    background-color: var(--color-gris);
+    overflow: hidden;
+}
+
+.lista_beneficios{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.beneficio{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 16px;
+    min-width: 0;
+    border-right: 1px solid var(--color-negro);
+}
+
+.beneficio:last-child{
+    border-right: none;
+}
+
+.beneficio_icono{
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.beneficio h3{
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 0 0 6px;
+}
+
+.beneficio p{
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0;
+}

@@ -1,0 +1,143 @@
+.catalogo {
+    width: 100%;
+    min-height: 100vh;
+    padding: 125px 4% 60px;
+    box-sizing: border-box;
+    color: var(--color-negro);
+}
+
+.catalogo_encabezado {
+    padding: 35px 0 45px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.catalogo_etiqueta {
+    margin: 0 0 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.catalogo_encabezado h1 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 54px);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+}
+
+.catalogo_descripcion {
+    max-width: 540px;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.catalogo_barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.catalogo_cantidad {
+    font-size: 12px;
+}
+
+.catalogo_controles {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.catalogo_controles label {
+    font-size: 12px;
+}
+
+.catalogo_controles select {
+    padding: 10px 30px 10px 12px;
+    border: 1px solid rgba(17, 17, 17, 0.3);
+    border-radius: 0;
+    background: transparent;
+    color: var(--color-negro);
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.contenedor_productos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 35px 18px;
+}
+
+.producto {
+    min-width: 0;
+}
+
+.producto_imagen {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    background: #e8e8e8;
+}
+
+.producto_imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.producto:hover .producto_imagen img {
+    transform: scale(1.045);
+}
+
+.producto_info {
+    padding: 15px 0 0;
+}
+
+.producto_categoria {
+    margin: 0 0 8px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.producto_nombre {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.producto_precio {
+    margin: 9px 0 15px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.producto_enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--color-negro);
+    color: var(--color-negro);
+    font-size: 11px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.producto_enlace:hover {
+    opacity: 0.6;
+}
+
+.catalogo_vacio {
+    padding: 45px 0;
+    font-size: 14px;
+}

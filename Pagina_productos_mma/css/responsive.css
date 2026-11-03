@@ -1,0 +1,231 @@
+@media (max-width: 1024px){
+    .lista_beneficios{
+        display: flex;
+        width: 100%;
+    }
+
+    .beneficio{
+        display: none;
+        width: 100%;
+        min-height: 100px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: none;
+    }
+
+    .beneficio.activo{
+        display: flex;
+    }
+
+    .beneficio h3{
+        font-size: 14px;
+    }
+
+    .beneficio p{
+        font-size: 12px;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tarjeta_categoria:hover img {
+        transform: scale(1.05);
+    }
+
+    .tarjeta_categoria:hover .flecha_categoria {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .tarjeta_categoria:hover {
+        border-color: #777;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .seccion_categorias {
+        padding: 25px;
+    }
+
+    .categoria {
+        flex-basis: calc((100% - 24px) / 3);
+    }
+
+    .tarjeta_categoria {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .seccion_categorias {
+        padding: 20px 18px;
+    }
+
+    .categoria {
+        flex-basis: 82%;
+    }
+
+    .tarjeta_categoria {
+        height: 220px;
+    }
+
+    .categoria_contenido h3,
+    .categoria_contenido h4 {
+        font-size: 16px;
+    }
+
+    .flecha_categoria {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .flecha_carrusel {
+        width: 36px;
+        height: 36px;
+    }
+
+    .flecha_izquierda {
+        left: -12px;
+    }
+
+    .flecha_derecha {
+        right: -12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar {
+        height: auto;
+        min-height: 0;
+        padding: 8px 12px 10px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "principal derecha"
+            "categorias categorias";
+        gap: 8px;
+    }
+
+    .navbar_principal {
+        grid-area: principal;
+        gap: 6px;
+        min-width: 0;
+    }
+
+    .navbar_logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .navbar_titulo {
+        font-size: 1.15rem;
+        letter-spacing: 1px;
+    }
+
+    .navbar_derecha {
+        grid-area: derecha;
+        gap: 2px;
+        margin: 0;
+    }
+
+    .navbar_button {
+        padding: 5px;
+    }
+
+    .navbar_button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .navbar_categorias {
+        grid-area: categorias;
+        width: 100%;
+        min-width: 0;
+        justify-content: flex-start;
+        gap: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 4px 0 6px;
+        scrollbar-width: none;
+    }
+
+    .navbar_categorias::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navbar_categoria {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .navbar_categoria:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contenedor_productos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .catalogo {
+        padding: 105px 18px 40px;
+    }
+
+    .catalogo_encabezado {
+        padding: 25px 0 30px;
+    }
+
+    .catalogo_barra {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .catalogo_controles {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        width: 100%;
+    }
+
+    .catalogo_controles select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contenedor_productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 12px;
+    }
+
+    .producto_nombre {
+        font-size: 12px;
+    }
+
+    .producto_precio {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contenedor_productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .producto_imagen img {
+        transition: none;
+    }
+}

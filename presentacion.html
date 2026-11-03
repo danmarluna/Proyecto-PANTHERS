@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre JavaScript</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* Página completa */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Encabezado */
+        header {
+            background-color: #29235C;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        /* Contenido principal */
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            /* Hace que el contenido ocupe el espacio disponible */
+            flex: 1;
+        }
+        /* Tarjeta */
+        .tarjeta {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Títulos */
+        h2 {
+            color: #29235C;
+        }
+        /* Botón */
+        button {
+            background-color: #D29D46;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #b98335;
+        }
+        /* Información adicional */
+        #informacionExtra {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-left: 5px solid #29235C;
+        }
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #29235C;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Programacion Visual</h1>
+        <p>
+            Programacion Visual con Interfaz grafica
+        </p>
+    </header>
+    <main>
+        <section class="tarjeta">
+            <h2>¿Que es la programacion visual?</h2>
+            <p>
+                La programación visual con interfaz gráfica es una forma de crear programas que tienen elementos visuales con los que el usuario puede interactuar, en lugar de usar únicamente una consola de texto.
+            </p>
+            <button onclick="mostrarInformacion()">
+                Mostrar más información
+            </button>
+            <div id="informacionExtra">
+                <h3>Dato interesante</h3>
+                <p>
+                    ¿Qué significa "programación visual"?
+                En muchas materias, Programación Visual con Interfaz Gráfica se refiere a aprender a crear programas mediante:
+                Una ventana.
+                Componentes visuales.
+                Eventos.
+                Código que responde a las acciones del usuario.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Ejemplo para clase - HTML, CSS y JavaScript
+        </p>
+    </footer>
+    <script>
+        function mostrarInformacion() {
+            const informacion =
+                document.getElementById("informacionExtra");
+            if (informacion.style.display === "block") {
+                informacion.style.display = "none";
+            } else {
+                informacion.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

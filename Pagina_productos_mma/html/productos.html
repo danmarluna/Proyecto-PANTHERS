@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANTHERS</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="icon" type="image/png" href="../assets/iconos/pantera.png">
+    <script src="../script/app.js" defer></script>
+    <script src="../script/productos.js" defer></script>
+    <script src="../script/catalago.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar_principal">
+                <img class="navbar_logo" src="../assets/iconos/icon-pantera.png" alt="Panteras" width="60px" height="60px">
+                <a href="index.html" class="navbar_titulo">
+                    PANTHERS
+                </a>
+            </div>
+            <div class="navbar_categorias">
+                <button class="navbar_categoria">
+                    Nuevo
+                </button>
+                <button class="navbar_categoria">
+                    Guantes
+                </button>
+                <button class="navbar_categoria">
+                    Hombre
+                </button>
+                <button class="navbar_categoria">
+                    Mujer
+                </button>
+                <button class="navbar_categoria">
+                    Niños
+                </button>
+                <button class="navbar_categoria">
+                    Costales
+                </button>
+                <button class="navbar_categoria">
+                    Deportes
+                </button>
+                <button class="navbar_categoria">
+                    Marcas
+                </button>
+            </div>
+            <div class="navbar_derecha">
+                <button class="navbar_button">
+                    <img src="../assets/iconos/avatar.png" alt="cuenta" width="30px" height="30px">
+                </button>
+                <button class="navbar_button">
+                    <img src="../assets/iconos/buscar.png" alt="buscar" width="30px" height="30px">
+                </button>
+                <button class="navbar_button">
+                    <img src="../assets/iconos/carrito-de-compras.png" alt="carrito" width="30px" height="30px">
+                </button>
+                <button class="navbar_button">
+                    <img src="../assets/iconos/favorito.png" alt="favorito" width="30px" height="30px">
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="catalogo">
+        <header class="catalogo_encabezado">
+            <p class="catalogo_etiqueta">EQUIPAMIENTO Y RENDIMIENTO</p>
+            <h1 id="tituloCategoria">Todos los productos</h1>
+            <p class="catalogo_descripcion">
+                El equipo adecuado para llevar tu entrenamiento al siguiente nivel.
+            </p>
+        </header>
+        <section class="catalogo_contenido">
+            <div class="catalogo_barra">
+                <div class="catalogo_cantidad">
+                    <span id="contadorProductos">0 productos</span>
+                </div>
+                <div class="catalogo_controles">
+                    <label for="filtroCategoria">Categoría</label>
+                    <select id="filtroCategoria">
+                        <option value="todos">Todas las categorías</option>
+                        <option value="guante_box">Guantes de boxeo</option>
+                        <option value="guante_mma">Guantes de MMA</option>
+                        <option value="espinilleras">Espinilleras</option>
+                        <option value="costal">Costales</option>
+                        <option value="bucal">Protectores</option>
+                        <option value="careta">Caretas</option>
+                        <option value="muay_thai">Muay Thai</option>
+                        <option value="wrestling">Wrestling</option>
+                    </select>
+                    <label for="ordenProductos">Ordenar por</label>
+                    <select id="ordenProductos">
+                        <option value="destacados">Destacados</option>
+                        <option value="precio-asc">Precio: menor a mayor</option>
+                        <option value="precio-desc">Precio: mayor a menor</option>
+                        <option value="nombre">Nombre: A-Z</option>
+                    </select>
+                </div>
+            </div>
+            <div
+                class="contenedor_productos"
+                id="contenedorProductos">
+            </div>
+            <p class="catalogo_vacio" id="mensajeVacio" hidden>
+                No encontramos productos en esta categoría.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__columna">
+            <h4>Ayuda</h4>
+                <p>
+                    Un asesor estara disponible de lunes a viernes de 9 am-6 pm llamando al
+                    <a href="https://wa.me/+523324447372" target="_blank">+523324447372.</a> Tambien puede contactarse a travez de Whatsapp o mandando un correo a la dirección
+                    <a href="mailto:danmarluna65@gmail.com" target="_blank">danmarluna65@gmail.com</a>
+                </p>
+                <p>
+                    Preguntas Frecuentes
+                </p>
+                <p>
+                    Condiciones y privacidad
+                </p>
+            </div>
+            <div class="footer__columna">
+            <h4>Destacados</h4>
+                <p>
+                    <a href="productos.html">
+                    MMA
+                    </a>
+                </p>
+                <p>
+                    <a href="productos.html">
+                    Box
+                    </a>
+                </p>
+                <p>
+                    <a href="productos.html">
+                    Wrestling
+                    </a>
+                </p>
+            </div>
+            <div class="footer__columna">
+            <h4>Siguenos</h4>
+                <p>
+                    <a href="#">
+                    Instagram
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                    Facebook
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                    Tiktok
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
