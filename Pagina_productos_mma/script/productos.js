@@ -89,11 +89,11 @@ const productos = [
     },
     {
         id: 12,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
-        destacado: false
+        nombre: "Kaad Chuek",
+        categoria: "muay_thai",
+        precio: 1460,
+        imagen: "../assets/imagenes/muay-thai/kaad-chuek.jpg",
+        destacado: true
     },
     {
         id: 13,
@@ -161,11 +161,11 @@ const productos = [
     },
     {
         id: 21,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
-        destacado: false
+        nombre: "Short para Muay Thai",
+        categoria: "muay_thai",
+        precio: 530,
+        imagen: "../assets/imagenes/muay-thai/short-muay.jpeg",
+        destacado: true
     },
     {
         id: 22,
@@ -193,10 +193,10 @@ const productos = [
     },
     {
         id: 25,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
+        nombre: "Codera Combat",
+        categoria: "muay_thai",
+        precio: 460,
+        imagen: "../assets/imagenes/muay-thai/codera-muay.jpeg",
         destacado: false
     },
     {
@@ -209,10 +209,10 @@ const productos = [
     },
     {
         id: 27,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
+        nombre: "Rodillera CRNR",
+        categoria: "muay_thai",
+        precio: 570,
+        imagen: "../assets/imagenes/muay-thai/rodillera-muay.jpeg",
         destacado: false
     },
     {
@@ -225,10 +225,10 @@ const productos = [
     },
     {
         id: 29,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
+        nombre: "Tobillera Frisky",
+        categoria: "muay-thai",
+        precio: 380,
+        imagen: "../assets/imagenes/muay-thai/tobillera-muay.jpeg",
         destacado: false
     },
     {
@@ -241,11 +241,11 @@ const productos = [
     },
     {
         id: 31,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
-        destacado: false
+        nombre: "Concha Asiana",
+        categoria: "wrestling",
+        precio: 670,
+        imagen: "../assets/imagenes/wrestling/concha-lucha.jpg",
+        destacado: true
     },
     {
         id: 32,
@@ -273,27 +273,27 @@ const productos = [
     },
     {
         id: 35,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
-        destacado: false
+        nombre: "Protector de oreja",
+        categoria: "wrestling",
+        precio: 760,
+        imagen: "../assets/imagenes/wrestling/ear-protector.jpeg",
+        destacado: true
     },
     {
         id: 36,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
+        nombre: "Ropa para competencia Lucha",
+        categoria: "wrestling",
+        precio: 860,
+        imagen: "../assets/imagenes/wrestling/ropa-lucha.webp",
         destacado: false
     },
     {
         id: 37,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
-        destacado: false
+        nombre: "Muñeco para entrenamiento",
+        categoria: "wrestling",
+        precio: 950,
+        imagen: "../assets/imagenes/wrestling/muñeco-lucha.jpg",
+        destacado: true
     },
     {
         id: 38,
@@ -305,10 +305,10 @@ const productos = [
     },
     {
         id: 39,
-        nombre: "Cuerda para saltar",
-        categoria: "accesorios",
-        precio: 299,
-        imagen: "img/productos/cuerda.jpg",
+        nombre: "Zapatillas para lucha",
+        categoria: "wrestling",
+        precio: 1750,
+        imagen: "../assets/imagenes/wrestling/zapatillas-lucha.jpg",
         destacado: false
     },
     {
