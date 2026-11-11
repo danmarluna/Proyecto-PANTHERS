@@ -129,7 +129,7 @@ const productos = [
     },
     {
         id: 17,
-        nombre: "Guante Boxeo Premiun",
+        nombre: "Guante Boxeo Premium",
         categoria: "guante_box",
         precio: 2100,
         imagen: "../assets/imagenes/guante-box/guante-premiun.jpg.webp",
@@ -226,7 +226,7 @@ const productos = [
     {
         id: 29,
         nombre: "Tobillera Frisky",
-        categoria: "muay-thai",
+        categoria: "muay_thai",
         precio: 380,
         imagen: "../assets/imagenes/muay-thai/tobillera-muay.jpeg",
         destacado: false

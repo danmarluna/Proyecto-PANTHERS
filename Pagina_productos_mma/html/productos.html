@@ -4,78 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANTHERS</title>
-    <link rel="stylesheet" href="../css/global.css">
     <link rel="icon" type="image/png" href="../assets/iconos/pantera.png">
-    <script src="../script/app.js" defer></script>
-    <script src="../script/productos.js" defer></script>
-    <script src="../script/catalago.js" defer></script>
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    panther: {
+                        black: "#111111",
+                        gray: "#D3D3D3",
+                        white: "#F8F8F8"
+                    }
+                }
+            }
+        }
+    };
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../script/app.js" defer></script>
+<script src="../script/productos.js" defer></script>
+<script src="../script/catalago.js" defer></script>
 </head>
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar_principal">
-                <img class="navbar_logo" src="../assets/iconos/icon-pantera.png" alt="Panteras" width="60px" height="60px">
-                <a href="index.html" class="navbar_titulo">
+<body class="m-0 bg-panther-gray p-0 font-sans text-panther-black">
+    <!--==Header==-->
+    <header class="fixed left-0 top-0 z-[1000] w-full bg-panther-gray">
+        <nav class="grid h-20 w-full grid-cols-[auto_1fr_auto] items-center gap-4 px-[10px]
+                    max-[650px]:h-auto max-[650px]:min-h-0
+                    max-[650px]:grid-cols-[minmax(0,1fr)_auto]
+                    max-[650px]:grid-rows-[auto_auto]
+                    max-[650px]:gap-2
+                    max-[650px]:px-3 max-[650px]:pb-[10px] max-[650px]:pt-2">
+    <!--==Logo==-->
+            <div class="flex shrink-0 items-center gap-2
+                        max-[650px]:col-start-1 max-[650px]:row-start-1
+                        max-[650px]:min-w-0 max-[650px]:gap-1.5">
+                <img class="block h-[60px] w-[60px] object-contain
+                            max-[650px]:h-9 max-[650px]:w-9"
+                            src="../assets/iconos/icon-pantera.png"
+                            alt="Panteras"
+                            width="60px"
+                            height="60px">
+                <a href="index.html"
+                class="rounded-lg text-[1.8rem] font-semibold tracking-[2px]
+                        text-panther-black no-underline
+                        max-[650px]:text-[1.15rem] max-[650px]:tracking-[1px]"
+                >
                     PANTHERS
                 </a>
             </div>
-            <div class="navbar_categorias">
-                <button class="navbar_categoria">
+    <!--==Categorias Navbar==-->
+            <div class="flex min-w-0 flex-1 items-center justify-center gap-[10px] px-1.5
+                        max-[650px]:col-span-2 max-[650px]:col-start-1
+                        max-[650px]:row-start-2
+                        max-[650px]:w-full max-[650px]:justify-start
+                        max-[650px]:gap-2
+                        max-[650px]:overflow-x-auto
+                        max-[650px]:overflow-y-hidden
+                        max-[650px]:py-1">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Nuevo
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Guantes
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Hombre
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Mujer
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Niños
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Costales
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Deportes
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Marcas
                 </button>
             </div>
-            <div class="navbar_derecha">
-                <button class="navbar_button">
-                    <img src="../assets/iconos/avatar.png" alt="cuenta" width="30px" height="30px">
+    <!--==Iconos Derecha==-->
+            <div class="mr-[10px] flex shrink-0 items-center gap-2
+                        max-[650px]:col-start-2 max-[650px]:row-start-1
+                        max-[650px]:mr-0 max-[650px]:gap-0.5">
+                <button class="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-1.5 hover:border hover:border-panther-black max-[650px]:p-[5px]">
+                    <img class="h-[25px] w-[25px] object-contain max-[650px]:h-5 max-[650px]:w-5"
+                        src="../assets/iconos/avatar.png" alt="cuenta" width="30px" height="30px">
                 </button>
-                <button class="navbar_button">
-                    <img src="../assets/iconos/buscar.png" alt="buscar" width="30px" height="30px">
+                <button class="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-1.5 hover:border hover:border-panther-black max-[650px]:p-[5px]">
+                    <img class="h-[25px] w-[25px] object-contain max-[650px]:h-5 max-[650px]:w-5" 
+                        src="../assets/iconos/buscar.png" alt="buscar" width="30px" height="30px">
                 </button>
-                <button class="navbar_button">
-                    <img src="../assets/iconos/carrito-de-compras.png" alt="carrito" width="30px" height="30px">
+                <button class="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-1.5 hover:border hover:border-panther-black max-[650px]:p-[5px]">
+                    <img class="h-[25px] w-[25px] object-contain max-[650px]:h-5 max-[650px]:w-5"
+                    src="../assets/iconos/carrito-de-compras.png" alt="carrito" width="30px" height="30px">
                 </button>
-                <button class="navbar_button">
-                    <img src="../assets/iconos/favorito.png" alt="favorito" width="30px" height="30px">
+                <button class="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-1.5 hover:border hover:border-panther-black max-[650px]:p-[5px]">
+                    <img class="h-[25px] w-[25px] object-contain max-[650px]:h-5 max-[650px]:w-5"
+                    src="../assets/iconos/favorito.png" alt="favorito" width="30px" height="30px">
                 </button>
             </div>
         </nav>
     </header>
-    <main class="catalogo">
-        <header class="catalogo_encabezado">
-            <p class="catalogo_etiqueta">EQUIPAMIENTO Y RENDIMIENTO</p>
+    <main class="min-h-screen w-full box-border px-[4%] pb-[60px] pt-[125px] text-panther-black">
+        <header class="border-b border-black/20 py-[35px] pb-[45px]">
+            <p class="mb-[14px] text-[11px] font-bold tracking-[2px]">EQUIPAMIENTO Y RENDIMIENTO</p>
             <h1 id="tituloCategoria">Todos los productos</h1>
-            <p class="catalogo_descripcion">
+            <p class="mt-4 max-w-[540px] text-sm leading-[1.7]">
                 El equipo adecuado para llevar tu entrenamiento al siguiente nivel.
             </p>
         </header>
         <section class="catalogo_contenido">
-            <div class="catalogo_barra">
-                <div class="catalogo_cantidad">
+            <div class="flex items-center justify-between gap-5 py-[25px] max-[700px]:flex-col max-[700px]:items-start">
+                <div class="text-xs">
                     <span id="contadorProductos">0 productos</span>
                 </div>
-                <div class="catalogo_controles">
+                <div class="flex flex-wrap items-center gap-[10px] max-[700px]:grid max-[700px]:w-full max-[700px]:grid-cols-[auto_minmax(0,1fr)]">
                     <label for="filtroCategoria">Categoría</label>
                     <select id="filtroCategoria">
                         <option value="todos">Todas las categorías</option>
@@ -98,7 +145,7 @@
                 </div>
             </div>
             <div
-                class="contenedor_productos"
+                class="grid grid-cols-4 gap-x-[18px] gap-y-[35px] max-[1024px]:grid-cols-3 max-[700px]:grid-cols-2 max-[700px]:gap-x-3 max-[700px]:gap-y-7 max-[360px]:grid-cols-1"
                 id="contenedorProductos">
             </div>
             <p class="catalogo_vacio" id="mensajeVacio" hidden>
@@ -106,58 +153,58 @@
             </p>
         </section>
     </main>
-    <footer>
-        <div class="footer">
-            <div class="footer__columna">
-            <h4>Ayuda</h4>
-                <p>
+    <!--==Footer==-->
+    <footer class="grid grid-cols-3 gap-[50px] border-t border-panther-black px-6 py-[25px]
+            max-[800px]:grid-cols-1 max-[800px]:gap-8">
+        <div class="ml-[135px] flex flex-col gap-[18px] max-[800px]:ml-0">
+            <h4 class="mb-[15px] text-[15px] font-bold">Ayuda</h4>
+                <p class="text-[15px]">
                     Un asesor estara disponible de lunes a viernes de 9 am-6 pm llamando al
-                    <a href="https://wa.me/+523324447372" target="_blank">+523324447372.</a> Tambien puede contactarse a travez de Whatsapp o mandando un correo a la dirección
-                    <a href="mailto:danmarluna65@gmail.com" target="_blank">danmarluna65@gmail.com</a>
+                    <a class="text-panther-black no-underline" href="https://wa.me/+523324447372" target="_blank">+523324447372.</a> Tambien puede contactarse a travez de Whatsapp o mandando un correo a la dirección
+                    <a class="text-panther-black no-underline" href="mailto:danmarluna65@gmail.com" target="_blank">danmarluna65@gmail.com</a>
                 </p>
-                <p>
+                <p class="text-[15px]">
                     Preguntas Frecuentes
                 </p>
-                <p>
+                <p class="text-[15px]">
                     Condiciones y privacidad
                 </p>
-            </div>
-            <div class="footer__columna">
-            <h4>Destacados</h4>
-                <p>
-                    <a href="productos.html">
+        </div>
+        <div class="ml-[135px] flex flex-col gap-[18px] max-[800px]:ml-0">
+            <h4 class="mb-[15px] text-[15px] font-bold">Destacados</h4>
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="productos.html">
                     MMA
                     </a>
                 </p>
-                <p>
-                    <a href="productos.html">
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="productos.html">
                     Box
                     </a>
                 </p>
-                <p>
-                    <a href="productos.html">
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="productos.html">
                     Wrestling
                     </a>
                 </p>
-            </div>
-            <div class="footer__columna">
-            <h4>Siguenos</h4>
-                <p>
-                    <a href="#">
+        </div>
+        <div class="ml-[135px] flex flex-col gap-[18px] max-[800px]:ml-0">
+            <h4 class="mb-[15px] text-[15px] font-bold">Siguenos</h4>
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="#">
                     Instagram
                     </a>
                 </p>
-                <p>
-                    <a href="#">
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="#">
                     Facebook
                     </a>
                 </p>
-                <p>
-                    <a href="#">
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="#">
                     Tiktok
                     </a>
                 </p>
-            </div>
         </div>
     </footer>
 </body>

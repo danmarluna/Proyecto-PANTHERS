@@ -4,247 +4,338 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANTHERS</title>
-    <link rel="stylesheet" href="../css/global.css">
     <link rel="icon" type="image/png" href="../assets/iconos/pantera.png">
-    <script src="../script/app.js" defer></script>
-    <script src="../script/productos.js" defer></script>
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    panther: {
+                        black: "#111111",
+                        gray: "#D3D3D3",
+                        white: "#F8F8F8"
+                    }
+                }
+            }
+        }
+    };
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../script/app.js" defer></script>
+<script src="../script/productos.js" defer></script>
 </head>
-<body>
+<body class="m-0 bg-panther-gray p-0 font-sans text-panther-black">
     <!--==Header==-->
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar_principal">
-                <img class="navbar_logo" src="../assets/iconos/icon-pantera.png" alt="Panteras" width="60px" height="60px">
-                <a href="index.html" class="navbar_titulo">
+    <header class="fixed left-0 top-0 z-[1000] w-full bg-panther-gray">
+        <nav class="grid h-20 w-full grid-cols-[auto_1fr_auto] items-center gap-4 px-[10px]
+                    max-[650px]:h-auto max-[650px]:min-h-0
+                    max-[650px]:grid-cols-[minmax(0,1fr)_auto]
+                    max-[650px]:grid-rows-[auto_auto]
+                    max-[650px]:gap-2
+                    max-[650px]:px-3 max-[650px]:pb-[10px] max-[650px]:pt-2">
+    <!--==Logo==-->
+            <div class="flex shrink-0 items-center gap-2
+                        max-[650px]:col-start-1 max-[650px]:row-start-1
+                        max-[650px]:min-w-0 max-[650px]:gap-1.5">
+                <img class="block h-[60px] w-[60px] object-contain
+                            max-[650px]:h-9 max-[650px]:w-9"
+                            src="../assets/iconos/icon-pantera.png"
+                            alt="Panteras"
+                            width="60px"
+                            height="60px">
+                <a href="index.html"
+                class="rounded-lg text-[1.8rem] font-semibold tracking-[2px]
+                        text-panther-black no-underline
+                        max-[650px]:text-[1.15rem] max-[650px]:tracking-[1px]"
+                >
                     PANTHERS
                 </a>
             </div>
-            <div class="navbar_categorias">
-                <button class="navbar_categoria">
+    <!--==Categorias Navbar==-->
+            <div class="flex min-w-0 flex-1 items-center justify-center gap-[10px] px-1.5
+                        max-[650px]:col-span-2 max-[650px]:col-start-1
+                        max-[650px]:row-start-2
+                        max-[650px]:w-full max-[650px]:justify-start
+                        max-[650px]:gap-2
+                        max-[650px]:overflow-x-auto
+                        max-[650px]:overflow-y-hidden
+                        max-[650px]:py-1">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Nuevo
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Guantes
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Hombre
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Mujer
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Niños
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Costales
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Deportes
                 </button>
-                <button class="navbar_categoria">
+                <button class="shrink-0 cursor-pointer whitespace-nowrap rounded-lg border border-panther-black bg-transparent px-[10px] py-2 text-[13px] hover:scale-110 hover:text-panther-white max-[650px]:px-[10px] max-[650px]:py-[7px] max-[650px]:text-xs max-[650px]:hover:scale-100">
                     Marcas
                 </button>
             </div>
-            <div class="navbar_derecha">
-                <button class="navbar_button">
-                    <img src="../assets/iconos/avatar.png" alt="cuenta" width="30px" height="30px">
+    <!--==Iconos Derecha==-->
+            <div class="mr-[10px] flex shrink-0 items-center gap-2
+                        max-[650px]:col-start-2 max-[650px]:row-start-1
+                        max-[650px]:mr-0 max-[650px]:gap-0.5">
+                <button class="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-1.5 hover:border hover:border-panther-black max-[650px]:p-[5px]">
+                    <img class="h-[25px] w-[25px] object-contain max-[650px]:h-5 max-[650px]:w-5"
+                        src="../assets/iconos/avatar.png" alt="cuenta" width="30px" height="30px">
                 </button>
-                <button class="navbar_button">
-                    <img src="../assets/iconos/buscar.png" alt="buscar" width="30px" height="30px">
+                <button class="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-1.5 hover:border hover:border-panther-black max-[650px]:p-[5px]">
+                    <img class="h-[25px] w-[25px] object-contain max-[650px]:h-5 max-[650px]:w-5" 
+                        src="../assets/iconos/buscar.png" alt="buscar" width="30px" height="30px">
                 </button>
-                <button class="navbar_button">
-                    <img src="../assets/iconos/carrito-de-compras.png" alt="carrito" width="30px" height="30px">
+                <button class="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-1.5 hover:border hover:border-panther-black max-[650px]:p-[5px]">
+                    <img class="h-[25px] w-[25px] object-contain max-[650px]:h-5 max-[650px]:w-5"
+                    src="../assets/iconos/carrito-de-compras.png" alt="carrito" width="30px" height="30px">
                 </button>
-                <button class="navbar_button">
-                    <img src="../assets/iconos/favorito.png" alt="favorito" width="30px" height="30px">
+                <button class="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-1.5 hover:border hover:border-panther-black max-[650px]:p-[5px]">
+                    <img class="h-[25px] w-[25px] object-contain max-[650px]:h-5 max-[650px]:w-5"
+                    src="../assets/iconos/favorito.png" alt="favorito" width="30px" height="30px">
                 </button>
             </div>
         </nav>
     </header>
     <!--==Main==-->
     <main>
-        <div class="hero">
-            <video autoplay loop muted playsinline width="100%" class="hero_video">
+    <!--==Hero==-->
+        <section class="relative h-[99vh] w-full overflow-hidden">
+            <video autoplay loop muted playsinline width="100%" class="relative z-[1] h-full w-full object-cover">
             <source src="../assets/videos/inicio.mp4" type="video/mp4">
             Tu navegador no soporta el video
             </video>
-        </div>
-        <section class="barra_beneficios">
-            <ul class="lista_beneficios">
-                <li class="beneficio">
-                    <img class="beneficio_icono" src="../assets/iconos/enviado.png" alt="Envio gratis" width="40px" height="40px">
+        </section>
+    <!--==Beneficios==-->
+        <section class="w-full overflow-hidden bg-panther-gray">
+            <ul class="m-0 grid list-none grid-cols-6 p-0 max-[1024px]:flex max-[1024px]:w-full">
+                <li class="hidden min-w-0 items-center gap-3 border-r border-panther-black px-4 py-6 last:border-r-0 min-[1025px]:flex">
+                    <img class="shrink-0" src="../assets/iconos/enviado.png" alt="Envio gratis" width="40px" height="40px">
                     <div>
-                        <h3>
+                        <h3 class="mb-1.5 text-[13px] font-semibold leading-[1.3]">
                             Envio Gratis
                         </h3>
-                        <p>
+                        <p class="m-0 text-[11px] leading-[1.4]">
                             Envios gratis Guadalajara o dentro de Jalisco en pedidos de $2,000 en adelante
                         </p>
                     </div>
                 </li>
-                <li class="beneficio">
-                    <img class="beneficio_icono" src="../assets/iconos/caja.png" alt="Recoger" width="40px" height="40px">
+                <li class="hidden min-w-0 items-center gap-3 border-r border-panther-black px-4 py-6 last:border-r-0 min-[1025px]:flex">
+                    <img class="shrink-0" src="../assets/iconos/caja.png" alt="Recoger" width="40px" height="40px">
                     <div>
-                        <h3>
+                        <h3 class="mb-1.5 text-[13px] font-semibold leading-[1.3]">
                             Recoger Pedido en 48 Horas
                         </h3>
-                        <p>
+                        <p class="m-0 text-[11px] leading-[1.4]">
                             En bodega Zapopan, Guadalajara
                         </p>
                     </div>
                 </li>
-                <li class="beneficio">
-                    <img class="beneficio_icono" src="../assets/iconos/tarjeta-de-credito.png" alt="Meses sin intereses" width="40px" height="40px">
+                <li class="hidden min-w-0 items-center gap-3 border-r border-panther-black px-4 py-6 last:border-r-0 min-[1025px]:flex">
+                    <img class="shrink-0" src="../assets/iconos/tarjeta-de-credito.png" alt="Meses sin intereses" width="40px" height="40px">
                     <div>
-                        <h3>
+                        <h3 class="mb-1.5 text-[13px] font-semibold leading-[1.3]">
                             12 Meses sin Intereses
                         </h3>
-                        <p>
+                        <p class="m-0 text-[11px] leading-[1.4]">
                             En todas las compras
                         </p>
                     </div>
                 </li>
-                <li class="beneficio">
-                    <img class="beneficio_icono" src="../assets/iconos/devolver.png" alt="Devolver" width="40px" height="40px">
+                <li class="hidden min-w-0 items-center gap-3 border-r border-panther-black px-4 py-6 last:border-r-0 min-[1025px]:flex">
+                    <img class="shrink-0" src="../assets/iconos/devolver.png" alt="Devolver" width="40px" height="40px">
                     <div>
-                        <h3>
+                        <h3 class="mb-1.5 text-[13px] font-semibold leading-[1.3]">
                             Devuelve con Facilidad
                         </h3>
-                        <p>
+                        <p class="m-0 text-[11px] leading-[1.4]">
                             Compras con el respaldo PANTHERS
                         </p>
                     </div>
                 </li>
-                <li class="beneficio">
-                    <img class="beneficio_icono" src="../assets/iconos/ubicacion.png" alt="Entregas en mexico" width="40px" height="40px">
+                <li class="hidden min-w-0 items-center gap-3 border-r border-panther-black px-4 py-6 last:border-r-0 min-[1025px]:flex">
+                    <img class="shrink-0" src="../assets/iconos/ubicacion.png" alt="Entregas en mexico" width="40px" height="40px">
                     <div>
-                        <h3>
+                        <h3 class="mb-1.5 text-[13px] font-semibold leading-[1.3]">
                             Entregas Rapidas Jalisco
                         </h3>
-                        <p>
+                        <p class="m-0 text-[11px] leading-[1.4]">
                             Jalisco: 2 a 4 dias habiles
                             <br>
                             Otras ubicaciones: 3 a 7 dias habiles
                         </p>
                     </div>
                 </li>
-                <li class="beneficio">
-                    <img class="beneficio_icono" src="../assets/iconos/etiqueta.png" alt="Entregas en mexico" width="40px" height="40px">
+                <li class="hidden min-w-0 items-center gap-3 border-r border-panther-black px-4 py-6 last:border-r-0 min-[1025px]:flex">
+                    <img class="shrink-0" src="../assets/iconos/etiqueta.png" alt="Entregas en mexico" width="40px" height="40px">
                     <div>
-                        <h3>
+                        <h3 class="mb-1.5 text-[13px] font-semibold leading-[1.3]">
                             Beneficios Nuevos Usuarios
                         </h3>
-                        <p>
+                        <p class="m-0 text-[11px] leading-[1.4]">
                             Cupones de descuento para nuevos usuarios
                         </p>
                     </div>
                 </li>
             </ul>
         </section>
-        <section class="seccion_categorias">
-            <div class="contenedor_categorias">
+    <!--==Categorias==-->
+        <section class="bg-panther-gray px-[35px] py-[30px] text-panther-white
+                        max-[1024px]:p-[25px]
+                        max-[600px]:px-[18px] max-[600px]:py-5">
+            <div class="relative w-full">
                 <button
-                class="flecha_carrusel flecha_izquierda"
+                class="absolute -left-5 top-1/2 z-10 flex h-[42px] w-[42px] -translate-y-1/2 items-center justify-center rounded-full border-0 bg-white text-xl text-[#111] hover:bg-panther-gray max-[600px]:-left-3 max-[600px]:h-9 max-[600px]:w-9"
                 id="flechaIzquierda"
                 aria-label="Ver categorías anteriores"
                 type="button">
                 &#10094;
                 </button>
-                <ul class="categorias" id="carruselCategorias">
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=careta" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/careta-box.jpeg" alt="Caretas">
-                            <div class="categoria_contenido">
-                                <h4>Caretas</h4>
+                <ul class="flex gap-[15px] overflow-x-auto overflow-y-hidden scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" id="carruselCategorias">
+                <!--==Caretas==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=careta"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/careta-box.jpeg" alt="Caretas"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Caretas</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=costal" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/costal-presentacion.jpg" alt="Costal Pesado">
-                            <div class="categoria_contenido">
-                                <h4>Costal Muay thai</h4>
+                <!--==Costas Muay Thai-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=costal"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/costal-presentacion.jpg" alt="Costal Pesado"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Costal Muay thai</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=muay_thai" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/codera-thai.jpeg" alt="Codera">
-                            <div class="categoria_contenido">
-                                <h4>Codera Muay thai</h4>
+                <!--==Codera==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=muay_thai"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/codera-thai.jpeg" alt="Codera"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Codera Muay thai</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=bucal" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/bucal-perso.jpeg" alt="Bucales">
-                            <div class="categoria_contenido">
-                                <h4>Bucales Personalizados</h4>
+                <!--==Bucal==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=bucal"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/bucal-perso.jpeg" alt="Bucales"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Bucales Personalizados</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=costal" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/costal-gota.jpeg" alt="Costal Box">
-                            <div class="categoria_contenido">
-                                <h4>Costal Boxeo</h4>
+                <!--==Costal Box==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=costal"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/costal-gota.jpeg" alt="Costal Box"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Costal Boxeo</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=espinilleras" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/espinillera-mma.jpeg" alt="Espinillera mma">
-                            <div class="categoria_contenido">
-                                <h4>Espinilleras MMA</h4>
+                <!--==Espinillera==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=espinilleras"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/espinillera-mma.jpeg" alt="Espinillera mma"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Espinilleras MMA</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=guante_mma" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/guante-mma.jpeg" alt="Guante mma Sparring">
-                            <div class="categoria_contenido">
-                                <h4>Guantes MMA Sparring</h4>
+                <!--==Guante MMA==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=guante_mma"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/guante-mma.jpeg" alt="Guante mma Sparring"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Guantes MMA Sparring</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=wrestling" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/muñeco-lucha.jpeg" alt="Muñeco wrestling">
-                            <div class="categoria_contenido">
-                                <h4>Wrestling</h4>
+                <!--==Wrestling==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=wrestling"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/muñeco-lucha.jpeg" alt="Muñeco wrestling"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Wrestling</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=guante_box" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/guante-box.jpeg" alt="Guante Kickboxing">
-                            <div class="categoria_contenido">
-                                <h4>Guante Boxeo</h4>
+                <!--==Guante Box==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=guante_box"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/guante-box.jpeg" alt="Guante Kickboxing"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Guante Boxeo</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
-                    <li class="categoria">
-                        <a href="../html/productos.html?categoria=espinilleras" class="tarjeta_categoria">
-                            <img src="../assets/imagenes/espinillera-thai.jpeg" alt="Espinillera Muay thai">
-                            <div class="categoria_contenido">
-                                <h4>Espinillera Muay thai</h4>
+                <!--==Espinillera Muay Thai==-->
+                    <li class="min-w-0 shrink-0 basis-[calc((100%-45px)/4)] snap-start max-[1024px]:basis-[calc((100%-30px)/3)] max-[600px]:basis-[82%]">
+                        <a href="../html/productos.html?categoria=espinilleras"
+                        class="group relative block h-[230px] w-full overflow-hidden rounded-[10px] border border-[#353535] bg-[#181818] text-panther-white no-underline box-border max-[1024px]:h-[220px]">
+                            <img src="../assets/imagenes/espinillera-thai.jpeg" alt="Espinillera Muay thai"
+                            class="h-full w-full object-cover object-center transition-transform duration-[450ms] ease-out group-hover:scale-105">
+                            <div class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-[18px] left-[18px] right-[55px] z-[2]">
+                                <h4 class="m-0 text-[17px] font-bold leading-[1.3] text-white max-[600px]:text-base">Espinillera Muay thai</h4>
                             </div>
-                            <span class="flecha_categoria">-></span>
+                            <span class="absolute bottom-[14px] right-[14px] z-[3] flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white text-[21px] text-[#111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 max-[600px]:translate-y-0 max-[600px]:opacity-100">-></span>
                         </a>
                     </li>
                 </ul>
                 <button
-                class="flecha_carrusel flecha_derecha"
+                class="absolute -right-5 top-1/2 z-10 flex h-[42px] w-[42px] -translate-y-1/2 items-center justify-center rounded-full border-0 bg-white text-xl text-[#111] hover:bg-panther-gray max-[600px]:-right-3 max-[600px]:h-9 max-[600px]:w-9"
                 id="flechaDerecha"
                 aria-label="Ver siguientes categorías"
                 type="button">
@@ -253,58 +344,58 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer">
-            <div class="footer__columna">
-            <h4>Ayuda</h4>
-                <p>
+    <!--==Footer==-->
+    <footer class="grid grid-cols-3 gap-[50px] border-t border-panther-black px-6 py-[25px]
+            max-[800px]:grid-cols-1 max-[800px]:gap-8">
+        <div class="ml-[135px] flex flex-col gap-[18px] max-[800px]:ml-0">
+            <h4 class="mb-[15px] text-[15px] font-bold">Ayuda</h4>
+                <p class="text-[15px]">
                     Un asesor estara disponible de lunes a viernes de 9 am-6 pm llamando al
-                    <a href="https://wa.me/+523324447372" target="_blank">+523324447372.</a> Tambien puede contactarse a travez de Whatsapp o mandando un correo a la dirección
-                    <a href="mailto:danmarluna65@gmail.com" target="_blank">danmarluna65@gmail.com</a>
+                    <a class="text-panther-black no-underline" href="https://wa.me/+523324447372" target="_blank">+523324447372.</a> Tambien puede contactarse a travez de Whatsapp o mandando un correo a la dirección
+                    <a class="text-panther-black no-underline" href="mailto:danmarluna65@gmail.com" target="_blank">danmarluna65@gmail.com</a>
                 </p>
-                <p>
+                <p class="text-[15px]">
                     Preguntas Frecuentes
                 </p>
-                <p>
+                <p class="text-[15px]">
                     Condiciones y privacidad
                 </p>
-            </div>
-            <div class="footer__columna">
-            <h4>Destacados</h4>
-                <p>
-                    <a href="productos.html">
+        </div>
+        <div class="ml-[135px] flex flex-col gap-[18px] max-[800px]:ml-0">
+            <h4 class="mb-[15px] text-[15px] font-bold">Destacados</h4>
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="productos.html">
                     MMA
                     </a>
                 </p>
-                <p>
-                    <a href="productos.html">
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="productos.html">
                     Box
                     </a>
                 </p>
-                <p>
-                    <a href="productos.html">
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="productos.html">
                     Wrestling
                     </a>
                 </p>
-            </div>
-            <div class="footer__columna">
-            <h4>Siguenos</h4>
-                <p>
-                    <a href="#">
+        </div>
+        <div class="ml-[135px] flex flex-col gap-[18px] max-[800px]:ml-0">
+            <h4 class="mb-[15px] text-[15px] font-bold">Siguenos</h4>
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="#">
                     Instagram
                     </a>
                 </p>
-                <p>
-                    <a href="#">
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="#">
                     Facebook
                     </a>
                 </p>
-                <p>
-                    <a href="#">
+                <p class="text-[15px]">
+                    <a class="text-panther-black no-underline" href="#">
                     Tiktok
                     </a>
                 </p>
-            </div>
         </div>
     </footer>
 </body>
